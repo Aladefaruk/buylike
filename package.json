@@ -20,7 +20,7 @@
     "npm": "8.3.0"
   },
   "scripts": {
-    "build:style": "tailwind build src/index.css",
+    "build:style": "tailwind build src/index.css -o src/tailwind.css",
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
