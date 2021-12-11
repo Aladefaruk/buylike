@@ -12,20 +12,20 @@ function App() {
   const GetAllNarutoCards = async () => {
     try {
       const res = await fetch(
-        `https://api.jikan.moe/v3/search/anime?q=naruto&amp;limit=16`,
-        {
-          headers: {},
-        }
+        `https://api.jikan.moe/v3/search/anime?q=naruto&amp;limit=16`
       );
       const res_json = await res.json();
       console.log(res_json);
 
       if (!res.ok) {
+        console.log(res);
       }
       dispatch(updateData(res_json.results));
 
       setLoading(false);
-    } catch (error) {}
+    } catch (error) {
+      console.log(error);
+    }
   };
   useEffect(() => {
     GetAllNarutoCards();

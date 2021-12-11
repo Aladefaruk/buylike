@@ -19,6 +19,7 @@
     "npm": "7.10.0"
   },
   "scripts": {
+    "build:style": "tailwind build src/index.css" ,
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
